@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-Traducción del sitio: <a target="_blank" href="https://gmoria.nongnu.org/moria.html">https://gmoria.nongnu.org/moria.html</a>
+Traducción de: <a target="_blank" href="https://beej.us/moria/moria.txt">https://beej.us/moria/moria.txt</a>
 <br>
 v1 24/nov/2025
 <br>
@@ -57,7 +57,7 @@ ul.no-bullet {list-style: none}
 <body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
 <h1 class="settitle" align="center">Manual del roguelike clásico “Moria”</font></font></h1>
 <a name="SEC_Contents"></a>
-<h2 class="contents-heading">Tabla de contenido</font></h2>
+<h2 class="contents-heading">Tabla de contenido</h2>
 
 <div class="contents">
 <ul class="no-bullet">
@@ -437,42 +437,44 @@ Paladín        9     5     4                 2      2        4                 
 </li></ul>
 
 
-
 <hr>
 <a name="Adventuring"></a>
 <a name="Adventuring-1"></a>
-<h2 class="chapter">4 Aventuras</font></h2>
-<p>Tras crear el personaje, puede comenzar su aventura en la mazmorra. Los símbolos que aparecen en pantalla representan las paredes, el suelo, los objetos, las características y las criaturas que acechan. Para guiar al personaje en su aventura, el jugador introducirá comandos individuales.
+<h2 class="chapter">4 Aventuras</h2>
+<p>Tras crear el personaje, puede comenzar su aventura en la mazmorra. Los símbolos que aparecen en pantalla representan las paredes, el suelo, los objetos, las características y las criaturas que acechan. Para guiar al personaje en su aventura, el jugador va escribiendo comandos.
 </p>
 <p><em>Cada símbolo y comando de Moria</em> cuenta con una sección de ayuda. El jugador debe revisar estas secciones antes de embarcarse en una aventura. Finalmente, se incluye una descripción del nivel de la ciudad y ayuda general para la aventura.
 </p>
 <hr>
 <a name="Symbols-On-The-Screen"></a>
 <a name="Symbols-On-The-Screen-1"></a>
-<h2 class="chapter">5 símbolos en la pantalla</font></h2>
+<h2 class="chapter">5 símbolos en la pantalla</h2>
 <p>Los símbolos en el mapa se pueden dividir en tres categorías:
-</p><ol>
-<li>Características de la mazmorra como paredes, suelo, puertas y trampas.
-</li><li>Objetos que se pueden recoger, como tesoros, armas, armaduras, dispositivos mágicos, etc.
-</li><li>Criaturas que pueden o no moverse por la mazmorra, pero que en su mayoría son dañinas para el bienestar del personaje.
-</li></ol>
-
-<p>Algunos símbolos pueden pertenecer a más de una categoría. Ten en cuenta también que el tesoro puede estar incrustado en una pared, y esta debe retirarse para poder recogerlo.
 </p>
-<p>No será necesario recordar todos los símbolos y sus significados. Un simple comando, el </font></font><code>/</code>, identificará cualquier símbolo que aparezca en el mapa. Consulte la sección sobre comandos para obtener más ayuda.
-</p>
-<pre class="verbatim">                            Características
 
-. Un espacio en el suelo, o una trampa oculta 1 Entrada a la Tienda General
-# Un muro 2 Entrada a la Armería
-' Una puerta abierta 3 Entrada a Armero
-+ Una puerta cerrada 4 Entrada al Templo
-^ Una trampa 5 Entrada a la Tienda de Alquimia
-&lt; Una escalera hacia arriba 6 Entrada a la Tienda de Magia
-&gt; Una escalera hacia abajo: Obstrucción de escombros
-;Una piedra de suelo suelta Un pozo abierto (En blanco)
-% Una veta mineral @ El personaje
-</pre>
+<ol>
+<li>Características de la mazmorra como paredes, suelo, puertas y trampas.</li>
+<li>Objetos que se pueden recoger, como tesoros, armas, armaduras, dispositivos mágicos, etc.</li>
+<li>Criaturas que pueden o no moverse por la mazmorra, pero que en su mayoría son dañinas.</li>
+</ol>
+
+<p>Algunos símbolos pueden pertenecer a más de una categoría. Ten en cuenta también que un tesoro puede estar incrustado en una pared, y esta debe retirarse o picarse para poder recogerlo.</p>
+
+<p>No será necesario recordar todos los símbolos y sus significados, el comando <code>/</code> identificará cualquier símbolo que aparezca en el mapa. Consulte la sección sobre comandos para obtener más ayuda.</p>
+
+<pre><code>                                Características
+
+.  Un espacio en el suelo, o una trampa oculta   1   Entrada a la Tienda General
+#  Un muro                                       2   Entrada a la Armería
+'  Una puerta abierta                            3   Entrada a Armero
++  Una puerta cerrada                            4   Entrada al Templo
+^  Una trampa                                    5   Entrada a la Tienda de Alquimia
+<  Una escalera hacia arriba                     6   Entrada a la Tienda de Magia
+>  Una escalera hacia abajo                      :   Obstrucción de escombros
+;  Una piedra de suelo suelta                        Un pozo abierto (en blanco)
+%  Una veta mineral                              @   Tu personaje
+</code></pre>
+
 <pre class="verbatim">                             Objetos
 
 ¿Un frasco o una poción? ¿Un pergamino?
@@ -559,7 +561,7 @@ ORO: 23868
 <hr>
 <a name="Commands"></a>
 <a name="Commands-1"></a>
-<h2 class="chapter">6 comandos</font></h2>
+<h2 class="chapter">6 comandos</h2>
 <p>Todos los comandos se introducen con una sola tecla. Algunos comandos son mayúsculas o caracteres de control, lo que requiere que el jugador mantenga pulsada la tecla Mayús o Control mientras pulsa otra tecla. Como característica especial, las teclas de control se pueden introducir con una sola pulsación o con dos, empezando por un </font></font><code>^</code>carácter.
 </p>
 <p>Hay dos conjuntos de comandos: el conjunto de comandos original, que es el predeterminado (por ejemplo, el conjunto de comandos original de estilo VMS), y el conjunto de comandos de tipo roguelike. Este último suele ser más práctico, sobre todo si el teclado no tiene teclado numérico.
@@ -1009,7 +1011,7 @@ comando puede usarse para descender un nivel de la mazmorra. Siempre hay dos o t
 <hr>
 <a name="The-Town-Level"></a>
 <a name="The-Town-Level-1"></a>
-<h2 class="chapter">7 El nivel de la ciudad</font></h2>
+<h2 class="chapter">7 El nivel de la ciudad</h2>
 <p>El nivel del pueblo es donde el personaje comenzará su aventura. El pueblo consta de seis edificios, cada uno con una entrada, algunos habitantes y una muralla que lo rodea. Al principio del juego será de día, pero más adelante el personaje podría regresar y descubrir que ha anochecido. (Ten en cuenta que algunos hechizos pueden actuar de forma diferente en el nivel del pueblo).
 </p>
 
@@ -1069,7 +1071,7 @@ comando puede usarse para descender un nivel de la mazmorra. Siempre hay dos o t
 <hr>
 <a name="Within-The-Dungeon"></a>
 <a name="Within-The-Dungeon-1"></a>
-<h2 class="chapter">8 Dentro de la mazmorra</font></h2>
+<h2 class="chapter">8 Dentro de la mazmorra</h2>
 <p>Una vez que el personaje esté bien abastecido de comida, luz, armadura y armas, es hora de entrar en la mazmorra. Sitúate sobre el </font></font><code>&gt;</code>símbolo y usa el </font></font><code>&gt;</code>comando hacia abajo. El personaje entra en un laberinto de escaleras interconectadas y finalmente atraviesa una puerta de un solo sentido. El personaje se encuentra ahora en el primer nivel de la mazmorra (15 metros) y deberá sobrevivir a muchos encuentros horribles y desafiantes para encontrar el tesoro escondido.
 </p>
 <p>Hay dos fuentes de luz dentro de la mazmorra: una luz permanente colocada mágicamente en las habitaciones y una fuente de luz que lleva el personaje. Si ninguna de las dos está presente, el personaje no podrá mapear ni ver a los atacantes. La falta de luz también afectará la búsqueda, el forzamiento de cerraduras, el desarme y el lanzamiento de hechizos.
@@ -1079,7 +1081,7 @@ comando puede usarse para descender un nivel de la mazmorra. Siempre hay dos o t
 <hr>
 <a name="Attacking-and-Being-Attacked"></a>
 <a name="Attacking-and-Being-Attacked-1"></a>
-<h2 class="chapter">9 Atacar y ser atacado</font></h2>
+<h2 class="chapter">9 Atacar y ser atacado</h2>
 <p>Atacar es sencillo en <em>moria</em> . Al moverse hacia una criatura, el personaje la ataca. Puede atacar a distancia disparando un proyectil o con medios mágicos, como apuntar con una varita. Las criaturas atacan de la misma manera: si se mueven hacia el personaje, atacan. Algunas criaturas también pueden lanzar hechizos a distancia, y otras pueden escupir fuego o algo peor a distancia.
 </p>
 
@@ -1625,7 +1627,7 @@ H Genocidio 37 25 -- -- -- --
 <hr>
 <a name="Objects-Found-In-The-Dungeon"></a>
 <a name="Objects-Found-In-The-Dungeon-1"></a>
-<h2 class="chapter">10 objetos encontrados en la mazmorra</font></h2>
+<h2 class="chapter">10 objetos encontrados en la mazmorra</h2>
 <p>Las minas están llenas de objetos esperando a ser recogidos y usados. ¿Cómo llegaron allí? Bueno, la principal fuente de objetos útiles son todos los aventureros insensatos que entraron en la mazmorra previamente. Estos mueren, y las criaturas serviciales esparcen los diversos tesoros por toda la mazmorra. La mayoría de los objetos malditos son colocados allí por los alegres hechiceros malvados, quienes disfrutan de una buena broma cuando alguien muere.
 </p>
 <p>El personaje recoge objetos moviéndose sobre ellos. Se pueden llevar hasta 22 objetos diferentes en la mochila, además de usar y empuñar muchos otros. Aunque está limitado a 22 objetos, se pueden llevar varios de cada tipo, limitados únicamente por el peso que el personaje puede cargar. El límite de peso está determinado por la estadística de fuerza. Solo un objeto puede ocupar una ubicación en el piso, que puede contener o no una criatura. Puertas, trampas y escaleras se consideran objetos para este propósito.
@@ -1678,7 +1680,7 @@ H Genocidio 37 25 -- -- -- --
 <hr>
 <a name="Winning-The-Game"></a>
 <a name="Winning-The-Game-1"></a>
-<h2 class="chapter">11 Ganar el juego</font></h2>
+<h2 class="chapter">11 Ganar el juego</h2>
 <p>Una vez que el personaje haya progresado en la matanza de dragones con solo una mirada maliciosa y un chasquido de dedos, podría estar listo para enfrentarse al Balrog. El Balrog aparecerá en la mayoría de los niveles después del nivel 49 (una profundidad de 745 metros), así que no bajes hasta que el personaje esté listo para enfrentarse a la criatura más grande y temible del juego.
 </p>
 <p>El Balrog no puede ser eliminado con algunos de los métodos más sencillos utilizados contra criaturas normales. Se teletransportará astutamente a otro nivel si se lanza un hechizo como Destrucción. Además, no puede ser polimorfado, dormido, confundido ni genocidado. Los hechizos mágicos como Bola Fría son efectivos, al igual que las armas, pero el Balrog es difícil de eliminar, y si se le permite escapar a otro nivel, puede curarse a sí mismo.
@@ -1689,7 +1691,7 @@ H Genocidio 37 25 -- -- -- --
 <hr>
 <a name="Upon-Death-and-Dying"></a>
 <a name="Upon-Death-and-Dying-1"></a>
-<h2 class="chapter">12 Sobre la muerte y el morir</font></h2>
+<h2 class="chapter">12 Sobre la muerte y el morir</h2>
 <p>Si el personaje tiene menos de 0 puntos de vida, habrá muerto y no podrá recuperarse. Se mostrará una lápida con información sobre el personaje. Se proporcionará un registro del personaje, junto con todo su equipo (identificado), ya sea en pantalla o guardado en un archivo.
 </p>
 <p>El personaje dejará un archivo de guardado reducido, que solo contiene la memoria del monstruo y las opciones de juego. Puede restaurarse, en cuyo caso el nuevo personaje se genera exactamente como si el archivo no existiera, pero encontrará la memoria del monstruo con toda la experiencia de encarnaciones anteriores.
@@ -1697,13 +1699,13 @@ H Genocidio 37 25 -- -- -- --
 <hr>
 <a name="Wizards"></a>
 <a name="Wizards-1"></a>
-<h2 class="chapter">13 magos</font></h2>
+<h2 class="chapter">13 magos</h2>
 <p>Hay rumores de <em>Moria</em> Wizards que, si se les pregunta amablemente, pueden explicar detalles del juego <em>de Moria</em> que parecen complicados para los principiantes.
 </p>
 <hr>
 <a name="Contributors"></a>
 <a name="Contributors-1"></a>
-<h2 class="chapter">14 colaboradores</font></h2>
+<h2 class="chapter">14 colaboradores</h2>
 <p>Las siguientes personas han contribuido a <em>moria</em> :
 </p>
 <ul>
@@ -1769,7 +1771,7 @@ H Genocidio 37 25 -- -- -- --
 <hr>
 <a name="A-Word-From-The-Authors"></a>
 <a name="A-Word-From-The-Authors-1"></a>
-<h2 class="chapter">15 Una palabra de los autores</font></h2>
+<h2 class="chapter">15 Una palabra de los autores</h2>
 
 <p>A continuación se muestran algunas correspondencias interesantes que Robert Alan Koeneke y James E. Wilson han realizado en Internet.
 </p>
