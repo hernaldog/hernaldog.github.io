@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angband 4.2.6 en Español</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f5f0eb;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            padding: 2rem 1rem;
+            color: #1e1e1e;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem 2.5rem;
+            border-radius: 28px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+            color: #1f2a3a;
+            letter-spacing: -0.5px;
+            border-bottom: 3px solid #d4c9b8;
+            padding-bottom: 0.3rem;
+        }
+        .subhead {
+            font-size: 1.1rem;
+            color: #3e4a5c;
+            margin-top: 0.2rem;
+            margin-bottom: 1.8rem;
+            background: #f0ede8;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 2.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: #1f2a3a;
+            border-left: 6px solid #b3a086;
+            padding-left: 1rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2c3a4b;
+        }
+        h4 {
+            font-size: 1.2rem;
+            margin-top: 1.4rem;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+            color: #3d4d62;
+        }
+        p, li {
+            margin-bottom: 0.6rem;
+        }
+        ul, ol {
+            padding-left: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+        li {
+            margin-bottom: 0.3rem;
+        }
+        a {
+            color: #1f5c8a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #b7c9db;
+        }
+        a:hover {
+            color: #0d3b5e;
+            border-bottom: 2px solid #1f5c8a;
+        }
+        .badge {
+            background: #e3dcd2;
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #2c3a4b;
+            display: inline-block;
+            margin-right: 0.4rem;
+        }
+        .progress {
+            background: #d9d0c4;
+            border-radius: 40px;
+            padding: 0.25rem 1.2rem;
+            font-weight: 700;
+            color: #1f2a3a;
+        }
+        .captura-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
+            margin: 1.8rem 0 1rem;
+        }
+        .captura-grid img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+            border: 1px solid #ddd6cc;
+            background: #faf8f5;
+            transition: 0.2s;
+        }
+        .captura-grid img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        .code-block {
+            background: #1e252f;
+            color: #eaeef2;
+            padding: 1.2rem 1.6rem;
+            border-radius: 18px;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            margin: 1.2rem 0;
+            border-left: 4px solid #b3a086;
+        }
+        .code-block code {
+            background: none;
+            padding: 0;
+            color: #d6e2ed;
+        }
+        hr {
+            margin: 2.2rem 0;
+            border: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #d4c9b8, #ede7df, #d4c9b8);
+        }
+        .footer-meta {
+            margin-top: 2.5rem;
+            font-size: 0.95rem;
+            color: #4f5d6e;
+            border-top: 1px solid #ddd6cc;
+            padding-top: 1.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .license {
+            background: #efebe6;
+            padding: 0.5rem 1.2rem;
+            border-radius: 60px;
+            font-size: 0.9rem;
+        }
+        .tag {
+            background: #d9d0c4;
+            padding: 0.1rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #2d3a48;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 1.5rem; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<a href="index.html">Volver</a>
+    
+<h1>Angband 4.2.6 en Español</h1>
+    <div class="subhead">Autor: Hernaldo González · <a href="mailto:hernaldog@gmail.com">hernaldog@gmail.com</a></div>
+
+    <p><span class="badge">Estado general</span> <span class="progress">98%</span></p>
+
+    <p><span class="badge">URL Proyecto Git</span> <span class="badge"><a href="https://github.com/hernaldog/angband/tree/traduc-espa%C3%B1ol" target="_blank">https://github.com/hernaldog/angband/tree/traduc-espa%C3%B1ol</a></span></p>
+
+    <h2>Bitácora principal</h2>
+    <ul>
+        <li><strong>21-02-2026:</strong> Se entiende cómo compilar en Windows 11 y se hacen pruebas de concepto.</li>
+        <li><strong>21-02-2026:</strong> Se inicia traducción de primeros elementos como <code>news.txt</code> o archivos <code>.c</code>/<code>.h</code> base.</li>
+        <li><strong>20-03-2026:</strong> Se traducen archivos <code>.txt</code> dentro de <code>gamedata</code>, <code>.rst</code> y archivos de tiles <code>.prf</code>.</li>
+        <li><strong>23-03-2026:</strong> Para facilitar la traducción al español se cambian todos los prefijos en objetos (ej. "Un Pergamino", "Ves 1 Antorcha de Madera"). Inspirado en <em>Shattered Pixel Dungeon</em>.</li>
+        <li><strong>27-03-2026:</strong> Se editan <code>.txt</code>, se agrega <code>name_plural</code> en <code>object.txt</code> y se modifican <code>obj-init.c</code>, <code>object.h</code>, <code>obj-desc.c</code>, <code>z-textblock.c</code> para manejar plurales en español.</li>
+        <li><strong>28-03-2026:</strong> Se amplía el método que imprime caracteres a color de ASCII a UTF-8 en <code>effects-info.c</code> para soportar tildes.</li>
+        <li><strong>02-04-2026:</strong> Se traducen la mayoría de nombres de monstruos (<code>monster.txt</code>, <code>monster_base.txt</code>, <code>pit.txt</code>, <code>summon.txt</code>, <code>borg-flow-kill.c</code>).</li>
+        <li><strong>17-04-2026:</strong> Se traducen todos los objetos.</li>
+        <li><strong>13-06-2026:</strong> Razas, Clases, Versos del Druida, ajustes de semántica.</li>
+        <li><strong>25-06-2006:</strong> Se agrega género a los objetos (“Ves una Poción”, “Ves una Galleta”) y se traducen opciones de modo mago.</li>
+        <li><strong>09-07-2026:</strong> Se crea un sistema multi-idioma (inglés/español) con <code>lib/locale/es.po</code> y carpetas separadas <code>lib/gamedata/en/*.txt</code> y <code>es/*.txt</code>. Queda pendiente probar ambos idiomas.</li>
+    </ul>
+
+    <h2>Motivación</h2>
+    <p>Me encantan los juegos roguelike clásicos como <em>Moria</em>, <em>Rogue</em>, etc., y siempre he sido fan de <em>El Señor de los Anillos</em>. Angband une ambos mundos. Tras jugarlo en inglés, pensé que más hispanohablantes lo disfrutarían en español. Con experiencia traduciendo ROMs de SNES/NES en los 2000, decidí aplicar lo aprendido. ¡Espero terminar lo empezado!</p>
+
+    <h2>Objetivo del juego</h2>
+    <p>Angband es una rama de <a href="https://umoria.org" target="_blank">UMoria</a>. En esta versión hay que bajar al nivel 100 y derrotar a <strong>Morgoth</strong>. <a href="https://es.wikipedia.org/wiki/Angband_(videojuego)" target="_blank">Wikipedia</a>.</p>
+
+    <h2>Enlaces</h2>
+    <ul>
+        <li><a href="https://github.com/angband/angband" target="_blank">GitHub oficial</a></li>
+        <li><a href="https://rephial.org" target="_blank">Rephial.org</a> — últimas versiones para Windows, Linux y Mac</li>
+        <li><a href="https://angband.readthedocs.io/en/latest/index.html" target="_blank">Manual oficial (inglés)</a></li>
+        <li><a href="https://angband.live/forums/forum/angband/development/257970-angband-4-2-6-in-spanish" target="_blank">Hilo en foros oficiales</a></li>
+    </ul>
+
+    <h2>Licencia</h2>
+    <p>Se mantienen las licencias originales: <strong>GNU GPL v2</strong> y <strong>Licencia Angband</strong>.</p>
+
+    <h2>Capturas</h2>
+    <div class="captura-grid">
+        <img src="captura5.png" alt="Selección de idioma" loading="lazy">
+        <img src="captura6.png" alt="Ventana Windows en Español" loading="lazy">
+        <img src="captura1.png" alt="Intro" loading="lazy">
+        <img src="captura2.png" alt="Selección de personaje" loading="lazy">
+        <img src="captura31.png" alt="Inventario" loading="lazy">
+        <img src="captura4.png" alt="Tienda" loading="lazy">
+    </div>
+    <p style="font-size:0.9rem; color:#4f5d6e;">Estado actual de la traducción.</p>
+
+    <h2>Testing</h2>
+    <h3>Modo Mago</h3>
+    <ul>
+        <li><kbd>Control + w</kbd> entrar a modo mago (sin puntuación).</li>
+        <li><kbd>Control + a</kbd> activar comandos:
+            <ul>
+                <li><kbd>c</kbd>: elegir objeto que aparezca bajo tus pies.</li>
+                <li><kbd>s</kbd>: generar monstruos aleatorios.</li>
+                <li><kbd>n</kbd>: invocar monstruo por nombre o ID.</li>
+                <li><kbd>a</kbd>: curarte.</li>
+                <li><kbd>e</kbd>: editar puntos de habilidad, experiencia u oro.</li>
+                <li><kbd>j</kbd>: teletransportarse a un nivel (classic, lair, town, moria, cavern…).</li>
+                <li><kbd>w</kbd>: iluminar nivel.</li>
+                <li><kbd>T</kbd>: crear trampa (ej. <em>trampa de gas</em>).</li>
+                <li><kbd>v</kbd>: crear objeto muy bueno.</li>
+                <li><kbd>A</kbd>: subir al nivel 50 (máximo de experiencia).</li>
+            </ul>
+        </li>
+        <li>Más comandos en <code>docs/hacking/debug.rst</code>.</li>
+    </ul>
+
+    <h3>Teclas especiales (teclado español/latino)</h3>
+    <p>Para usar <kbd>~</kbd> (conocimiento):</p>
+    <ol>
+        <li>Presiona <kbd>=</kbd> <kbd>e</kbd> (Editar mapa de teclas).</li>
+        <li>Presiona <kbd>d</kbd> para crear un mapa.</li>
+        <li>Presiona la tecla <kbd>ñ</kbd>.</li>
+        <li>Escribe la tecla deseada: <kbd>Alt + 126</kbd> (para ~).</li>
+        <li>Presiona <kbd>=</kbd> para guardar.</li>
+        <li>Selecciona <kbd>b</kbd> “Guardar mapas de teclas en archivo”.</li>
+    </ol>
+    <p>El archivo quedará en <code>src/game/lib/user/&lt;nombre&gt;.prf</code>.</p>
+
+    <h3>Eliminar puntajes</h3>
+    <p>Borra <code>lib/user/scores/scores.raw</code> y <code>scores.old</code> para evitar acumular historial.</p>
+
+    <h2>Modo Borg</h2>
+    <p><kbd>Control + Z</kbd> modo autojugable. Presiona <kbd>z</kbd> para iniciar/detener.</p>
+
+    <h2>Pasos para compilar (si quieres colaborar o traducir a otro idioma)</h2>
+    <p>Si quieres colaborar contáctame al correo indicado al inicio del sitio.</p>
+    <p><strong>MSYS2</strong> (Windows):</p>
+    <div class="code-block">
+pacman -S make mingw-w64-x86_64-gcc mingw-w64-x86_64-cmake mingw-w64-x86_64-ninja
+pacman -S mingw-w64-x86_64-libpng mingw-w64-x86_64-ncurses
+pacman -S mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_image mingw-w64-x86_64-SDL2_ttf mingw-w64-x86_64-SDL2_mixer
+    </div>
+    <p>Desde <code>src</code>:</p>
+    <div class="code-block">
+cmake -G Ninja -DSUPPORT_WINDOWS_FRONTEND=ON -DSUPPORT_STATIC_LINKING=ON ..
+ninja
+    </div>
+    <p>El ejecutable se genera en <code>src/game/angband.exe</code>.</p>
+    <p>Para probarlo, copia el <code>.exe</code> sobre la instalación base de Angband 4.2.6 (descargada de <a href="https://rephial.org">rephial.org</a>).</p>
+
+    <h4>Script <code>compila.sh</code></h4>
+    <p>Coloca el script en <code>C:/msys64/home/tu_usuario</code> y ejecuta <code>.\compila.sh</code> desde MSYS2 MINGW64.</p>
+
+    <h2>Consideraciones para traducir</h2>
+    <ul>
+        <li><strong>Encoding:</strong> UTF-8 <strong>sin BOM</strong> para todos los <code>.c</code>, <code>.h</code>, <code>.txt</code>.</li>
+        <li>Se añade <code>#pragma code_page(65001)</code> en <code>win/angband.rc</code>.</li>
+        <li>Al traducir <code>.c</code>, elimina <code>src/game</code> antes de compilar.</li>
+        <li><strong>Archivos txt:</strong> se editan en <code>fuente/lib/gamedata</code> (no en <code>src/game/lib/gamedata</code>).</li>
+        <li>Cambiar el <code>name</code> en <code>object.txt</code> afecta a <code>class.txt</code>, <code>ego_item.txt</code>, <code>store.txt</code> y archivos de tiles (<code>lib/tiles/shockbolt/graf-shb-dark.prf</code>).</li>
+        <li>El plural se marca con <code>~</code> (ej. <code>Antorcha~ de Madera</code>).</li>
+        <li><strong>No traducir:</strong> <code>object_base.txt</code> y <code>list-ignore-types.h</code> (son puentes internos).</li>
+    </ul>
+
+    <hr>
+
+    <div class="footer-meta">
+        <span>Angband 4.2.6 · traducción al español</span>
+        <span class="license">GPL v2 &amp; Licencia Angband</span>
+    </div>
+</div>
+</body>
+</html>
