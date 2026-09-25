@@ -1,66 +1,249 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El manual de Angband 4.6.2 (en proceso)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f5f0eb;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            padding: 2rem 1rem;
+            color: #1e1e1e;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem 2.5rem;
+            border-radius: 28px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+            color: #1f2a3a;
+            letter-spacing: -0.5px;
+            border-bottom: 3px solid #d4c9b8;
+            padding-bottom: 0.3rem;
+        }
+        .subhead {
+            font-size: 1.1rem;
+            color: #3e4a5c;
+            margin-top: 0.2rem;
+            margin-bottom: 0.4rem;
+            background: #f0ede8;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 2.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: #1f2a3a;
+            border-left: 6px solid #b3a086;
+            padding-left: 1rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2c3a4b;
+        }
+        h4 {
+            font-size: 1.2rem;
+            margin-top: 1.4rem;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+            color: #3d4d62;
+        }
+        p, li {
+            margin-bottom: 0.6rem;
+        }
+        p {
+            text-align: justify;
+        }
+        ul, ol {
+            padding-left: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+        li {
+            margin-bottom: 0.3rem;
+        }
+        a {
+            color: #1f5c8a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #b7c9db;
+        }
+        a:hover {
+            color: #0d3b5e;
+            border-bottom: 2px solid #1f5c8a;
+        }
+        .badge {
+            background: #e3dcd2;
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #2c3a4b;
+            display: inline-block;
+            margin-right: 0.4rem;
+        }
+        .progress {
+            background: #d9d0c4;
+            border-radius: 40px;
+            padding: 0.25rem 1.2rem;
+            font-weight: 700;
+            color: #1f2a3a;
+        }
+        .code-block {
+            background: #1e252f;
+            color: #eaeef2;
+            padding: 1.2rem 1.6rem;
+            border-radius: 18px;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            margin: 1.2rem 0;
+            border-left: 4px solid #b3a086;
+        }
+        .code-block code {
+            background: none;
+            padding: 0;
+            color: #d6e2ed;
+        }
+        hr {
+            margin: 2.2rem 0;
+            border: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #d4c9b8, #ede7df, #d4c9b8);
+        }
+        .footer-meta {
+            margin-top: 2.5rem;
+            font-size: 0.95rem;
+            color: #4f5d6e;
+            border-top: 1px solid #ddd6cc;
+            padding-top: 1.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .tag {
+            background: #d9d0c4;
+            padding: 0.1rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #2d3a48;
+        }
+        /* Teclas / comandos de juego: fuente monoespaciada para diferenciarlos del texto normal */
+        .key {
+            font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
+            background: #efebe6;
+            border: 1px solid #d9d0c4;
+            border-radius: 6px;
+            padding: 0.05rem 0.4rem;
+            font-size: 0.92em;
+            font-weight: 600;
+            color: #1f2a3a;
+            white-space: nowrap;
+        }
+        .intro-box {
+            background: #f0ede8;
+            border-left: 6px solid #b3a086;
+            border-radius: 12px;
+            padding: 1rem 1.4rem;
+            margin: 1.2rem 0 1.6rem;
+        }
+        .toc {
+            background: #f0ede8;
+            border: 1px solid #ddd6cc;
+            border-radius: 16px;
+            padding: 1.2rem 1.6rem;
+            margin: 1.4rem 0 2rem;
+        }
+        .toc-title {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #4f5d6e;
+            margin-bottom: 0.7rem;
+        }
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .toc li {
+            margin-bottom: 0.25rem;
+        }
+        .toc a {
+            border-bottom: none;
+            color: #1f2a3a;
+            font-weight: 500;
+        }
+        .toc a:hover {
+            color: #1f5c8a;
+        }
+        .toc .toc-h1 > a {
+            font-weight: 700;
+        }
+        .toc .toc-h2 {
+            padding-left: 1.4rem;
+            font-size: 0.95rem;
+        }
+        .toc .toc-h2 a {
+            font-weight: 500;
+            color: #3e4a5c;
+        }
+        .toc .toc-h2::before {
+            content: "– ";
+            color: #b3a086;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 1.5rem; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
 
 
-
-<html class="translated-ltr"><!-- Created by GNU Texinfo 5.1, http://www.gnu.org/software/texinfo/ --><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<title>Naldo’s page</title>
-
-<meta name="description" content="The Moria Manual">
-<meta name="keywords" content="The Moria Manual">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-
-<link href="https://gmoria.nongnu.org/moria.html#Top" rel="start" title="Arriba">
-<link href="https://gmoria.nongnu.org/moria.html#SEC_Contents" rel="contents" title="Tabla de contenido">
-<link href="https://gmoria.nongnu.org/dir.html#Top" rel="up" title="(director)">
-<style type="text/css">
-<!--
-a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
-div.display {margin-left: 3.2em}
-div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
-div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
-pre.display {font-family: inherit}
-pre.format {font-family: inherit}
-pre.menu-comment {font-family: serif}
-pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
-ul.no-bullet {list-style: none}
--->
-</style>
-
-
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
-
-<h3>Naldo’s page</h3>
+<h1>Naldo’s page</h1>
 
 <p>
 Hola a tod@s, bueno solo mis cosas geek por acá :)
-
-<br>
-<ul>
-	<li><a href="Manual-de-Moria-Esp.html">Traducción del Manual de Moria al Español</a></li>
-	<li><a href="Angband-esp.html">Proyecto traducción Angband 4.2.6 (Windows) al Español</a></li>
-</ul>
 </p>
 
-<br><br>
+<h2>Angband</h2>
+
+<ul>
+	<li><a href="Proyecto-Traduc-juego-Angband-Esp.html">Proyecto traducción Angband 4.2.6 (Windows) al Español</a></li>
+	<li><a href="Manual-Angband-Esp.html">Traducción del Manual de Angband 4.2.6 al Español</a></li>
+</ul>
+
+<h2>Moria</h2>
+
+<ul>
+	<li><a href="Manual-de-Moria-Esp.html">Traducción del Manual de Moria al Español</a></li>
+</ul>
+
+
 <hr>
 <p>
 Contacto: <a href="mailto:hernaldog@gmail.com">hernaldog@gmail.com</a>
@@ -70,4 +253,5 @@ Mi blog <b>Naldo stuff</b>: <a href="https://naldog.blogspot.com">https://naldog
 </p>
 
 
-</body></html>
+</body>
+</html>

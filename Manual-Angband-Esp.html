@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traducción del manual de Angband 4.6.2 (en proceso)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f5f0eb;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            padding: 2rem 1rem;
+            color: #1e1e1e;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem 2.5rem;
+            border-radius: 28px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+            color: #1f2a3a;
+            letter-spacing: -0.5px;
+            border-bottom: 3px solid #d4c9b8;
+            padding-bottom: 0.3rem;
+        }
+        .subhead {
+            font-size: 1.1rem;
+            color: #3e4a5c;
+            margin-top: 0.2rem;
+            margin-bottom: 0.4rem;
+            background: #f0ede8;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 2.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: #1f2a3a;
+            border-left: 6px solid #b3a086;
+            padding-left: 1rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2c3a4b;
+        }
+        h4 {
+            font-size: 1.2rem;
+            margin-top: 1.4rem;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+            color: #3d4d62;
+        }
+        p, li {
+            margin-bottom: 0.6rem;
+        }
+        p {
+            text-align: justify;
+        }
+        ul, ol {
+            padding-left: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+        li {
+            margin-bottom: 0.3rem;
+        }
+        a {
+            color: #1f5c8a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #b7c9db;
+        }
+        a:hover {
+            color: #0d3b5e;
+            border-bottom: 2px solid #1f5c8a;
+        }
+        .badge {
+            background: #e3dcd2;
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #2c3a4b;
+            display: inline-block;
+            margin-right: 0.4rem;
+        }
+        .progress {
+            background: #d9d0c4;
+            border-radius: 40px;
+            padding: 0.25rem 1.2rem;
+            font-weight: 700;
+            color: #1f2a3a;
+        }
+        .code-block {
+            background: #1e252f;
+            color: #eaeef2;
+            padding: 1.2rem 1.6rem;
+            border-radius: 18px;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            margin: 1.2rem 0;
+            border-left: 4px solid #b3a086;
+        }
+        .code-block code {
+            background: none;
+            padding: 0;
+            color: #d6e2ed;
+        }
+        hr {
+            margin: 2.2rem 0;
+            border: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #d4c9b8, #ede7df, #d4c9b8);
+        }
+        .footer-meta {
+            margin-top: 2.5rem;
+            font-size: 0.95rem;
+            color: #4f5d6e;
+            border-top: 1px solid #ddd6cc;
+            padding-top: 1.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .tag {
+            background: #d9d0c4;
+            padding: 0.1rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #2d3a48;
+        }
+        /* Teclas / comandos de juego: fuente monoespaciada para diferenciarlos del texto normal */
+        .key {
+            font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;
+            background: #efebe6;
+            border: 1px solid #d9d0c4;
+            border-radius: 6px;
+            padding: 0.05rem 0.4rem;
+            font-size: 0.92em;
+            font-weight: 600;
+            color: #1f2a3a;
+            white-space: nowrap;
+        }
+        .intro-box {
+            background: #f0ede8;
+            border-left: 6px solid #b3a086;
+            border-radius: 12px;
+            padding: 1rem 1.4rem;
+            margin: 1.2rem 0 1.6rem;
+        }
+        .toc {
+            background: #f0ede8;
+            border: 1px solid #ddd6cc;
+            border-radius: 16px;
+            padding: 1.2rem 1.6rem;
+            margin: 1.4rem 0 2rem;
+        }
+        .toc-title {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #4f5d6e;
+            margin-bottom: 0.7rem;
+        }
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .toc li {
+            margin-bottom: 0.25rem;
+        }
+        .toc a {
+            border-bottom: none;
+            color: #1f2a3a;
+            font-weight: 500;
+        }
+        .toc a:hover {
+            color: #1f5c8a;
+        }
+        .toc .toc-h1 > a {
+            font-weight: 700;
+        }
+        .toc .toc-h2 {
+            padding-left: 1.4rem;
+            font-size: 0.95rem;
+        }
+        .toc .toc-h2 a {
+            font-weight: 500;
+            color: #3e4a5c;
+        }
+        .toc .toc-h2::before {
+            content: "– ";
+            color: #b3a086;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 1.5rem; }
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<a href="index.html">Volver</a>    
+
+    <h1 id="manual-angband">El manual de Angband 4.6.2 en Español (en proceso de traducción)</h1>
+    <div class="subhead">Traducción del manual oficial en inglés <a target="_blank" href="https://angband.readthedocs.io">https://angband.readthedocs.io</a>, pero como lo traduje al español le hice varios ajustes para dejarla actualizada. Proyecto GitHub de la traducción <a target="_blank" href="https://github.com/hernaldog/angband/tree/traduc-espa%C3%B1ol">https://github.com/hernaldog/angband/tree/traduc-español</a></div>
+
+
+<div class="toc">
+        <div class="toc-title">Contenido</div>
+        <ul>           
+            <li class="toc-h2"><a href="#bienvenido">Bienvenido a Angband</a></li>
+            <li class="toc-h2"><a href="#empezando">Empezando</a></li>
+            <li class="toc-h1"><a href="#guia-jugador">Guía del jugador de Angband</a></li>
+            <li class="toc-h2"><a href="#lo-basico">Lo básico</a></li>
+        </ul>
+    </div>
+
+
+    <h2 id="bienvenido">Bienvenido a Angband</h2>
+    <p>Angband es un complejo juego de simulación de mazmorras para un solo jugador. El jugador (es decir, ¡tú mismo!) crea un personaje, eligiendo entre una variedad de razas y clases, y luego juega con ese personaje durante días, semanas o incluso meses.</p>
+
+    <p>El jugador comenzará su aventura en el nivel del pueblo, donde podrá adquirir suministros, armas, armaduras y objetos mágicos comprando en las tiendas. Luego, podrá descender a las Fosas de Angband, donde explorará los numerosos niveles de la mazmorra, ganando experiencia al derrotar a feroces criaturas, recolectar objetos poderosos y valiosos tesoros, y regresar al pueblo ocasionalmente para comprar suministros. Con el tiempo, a medida que el jugador adquiera más experiencia, podrá intentar terminar o ganar el juego derrotando a Morgoth, el Señor de la Oscuridad, que reside en las profundidades.</p>
+
+    <p>Angband es un juego muy complejo, y puede resultar difícil comprenderlo todo al principio, sobre todo si nunca has jugado a un juego roguelike. Un recurso clave para los jugadores de Angband es el <a href="https://angband.live/forums/" target="_blank">foro</a>, donde puedes pedir ayuda y también publicar elogios, quejas, sugerencias, informes de errores y experiencias interesantes. ¡No seas tímido!</p>
+
+    <h2 id="empezando">Empezando</h2>
+    <h3>Una demostración rápida</h3>
+
+    <p>Angband es un juego muy complejo, así que quizás valga la pena leer la siguiente demostración rápida. Las siguientes instrucciones son solo para fines demostrativos, por lo que son intencionadamente aburridas.</p>
+
+    <p>Para esta demostración, asumiremos que nunca has jugado Angband, que no has solicitado ninguna "sub-ventana" especial, que no has solicitado ningún modo "gráfico" especial, que tienes un <strong>teclado numérico</strong> en tu computadora y que estás utilizando las opciones predeterminadas, incluyendo, en particular, el conjunto de comandos "original". Si alguna de estas suposiciones es incorrecta, ten en cuenta que esta demostración podría no funcionar; en particular, ten en cuenta que los usuarios de Windows usarán Tiles gráficos por defecto, por lo que, a menos que desactives los gráficos, los símbolos del mapa a continuación serán reemplazados por pequeñas imágenes. Hay muchas maneras de ver este archivo mientras juegas.</p>
+
+    <p>Cada vez que veas el mensaje <strong>-más-</strong>, léelo y pulsa la barra espaciadora. Esto tiene prioridad sobre cualquier otra instrucción. En cualquier otro caso, por ejemplo, si pulsas una tecla por accidente, normalmente puedes cancelar la acción en curso pulsando la tecla <span class="key">ESC</span>.</p>
+
+    <p>Cuando el juego se inicie, dependiendo de la plataforma que uses, es posible que accedas directamente a la pantalla de creación de personajes o que tengas que crear uno nuevo a través del menú File (Archivo). En ambos casos, verás la pantalla de información del personaje y tendrás varias opciones. Para esta demo, pulsa <span class="key">a</span> tres veces para elegir un personaje "guerrero humano" con el sistema de asignación de estadísticas basado en puntos. A continuación, verás una descripción de tu personaje. Léelo brevemente; contiene mucha información, y la mayor parte no tendrá sentido. Pulsa <span class="key">Enter</span> cuatro veces y tu personaje aparecerá en la "ciudad".</p>
+
+    <p>Ahora deberías estar viendo la pantalla básica de interacción de la mazmorra. A la izquierda hay información sobre tu personaje. A la derecha hay una vista aérea del pueblo. No sucede nada en Angband mientras el juego espera que introduzcas un comando, así que observa bien el pueblo. Verás varios símbolos en la pantalla. Cada símbolo normalmente representa un elemento del terreno, un objeto o un monstruo. El <span class="key">@</span> es un símbolo especial, representa a tu personaje. Puedes usar el comando <span class="key">/</span> para averiguar qué representa un símbolo determinado. Pulsa <span class="key">/</span> y luego <span class="key">@</span> y podrás verificar el significado del símbolo <span class="key">@</span>.</p>
+
+    <p>Los bloques sólidos (se ven como <span class="key">#</span> y en algunos sistemas gráficos pueden ser símbolos) que rodean el pueblo representan las murallas que la rodean. No se puede salir del pueblo a la superficie, aunque algunos juegos derivados de Angband (llamados "variantes") incluyen un elemento en la superficie.</p>
+
+    <p>Los bloques rectangulares de paredes con un número en el borde representan tiendas. El número indica la entrada a la tienda. Los símbolos <span class="key">.</span> representan el piso. Al inicio del juego será de día, por lo que la mayor parte de la ciudad debería consistir en tiendas y cuadrículas de piso iluminadas. También habrá algunos símbolos <span class="key">:</span> que representan escombros. Los escombros se presentan en dos variedades: "escombros transitables" y "escombros simples", que se distinguen por su color. Ambos bloquean la visión, pero solo se pueden atravesar los escombros transitables.</p>
+
+    <p>Los símbolos alfabéticos siempre representan monstruos, y el término "monstruos" abarca una amplia variedad de entidades, incluyendo personas, animales, plantas, etc. Normalmente, solo aparecen unas pocas razas de monstruos en la ciudad, y la mayoría son inofensivas (evita a los mercenarios y veteranos si los ves). Los "monstruos" más comunes en la ciudad son animales pequeños (gatos y perros) y los propios habitantes (mercaderes, mercenarios, maleantes, vagabundos, etc.).</p>
+
+    <p>Ahora usa el comando <span class="key">l</span> para "mirar" alrededor. Esto te permite mover el cursor y obtener una descripción de lo que hay en la posición del cursor. El cursor siempre comienza en la casilla donde se encuentra tu personaje. En este caso, verás un mensaje que indica que tu personaje está en una escalera. Al presionar la barra espaciadora, podrás recorrer los lugares de interés cercanos. Presiona <span class="key">q</span> o <span class="key">ESC</span> para salir del comando mirar.</p>
+
+    <p>Ahora pulsa <span class="key">i</span>, para ver el "inventario" de tu personaje. Los personajes nuevos comienzan con algunos objetos que les ayudarán a sobrevivir (aunque hay una opción para empezar con más dinero). Tu personaje tendrá algo de comida, una poción, antorchas y un pergamino. Pulsa <span class="key">ESC</span> para salir de la visualización del inventario. Pulsa <span class="key">e</span> para ver lo que llevas puesto. Verás que llevas armadura, empuñas una daga e iluminas el camino con una antorcha. Tienes muchas otras ranuras de equipo, pero están todas vacías. Pulsa <span class="key">ESC</span> para salir de la visualización del equipo.</p>
+
+    <p>Pulsa <span class="key">t</span> para quitarte algo. Observa que la lista de equipo se reduce a los objetos que realmente se pueden quitar. Pulsa <span class="key">g</span> para quitarte la armadura y vuelve a pulsar <span class="key">e</span>. Observa que la armadura ya no aparece en la lista de equipo. Pulsa <span class="key">ESC</span>. Pulsa <span class="key">w</span> para empuñar algo y observa que la lista de inventario se reduce a los objetos que realmente se pueden empuñar o llevar puestos. Pulsa <span class="key">e</span> para volver a ponerte la armadura.</p>
+
+    <p>Los monstruos solo pueden moverse después de que uses un comando que consume energía de tu personaje. Hasta ahora, has usado los comandos <span class="key">w</span> y <span class="key">t</span>, que consumen energía, y los comandos <span class="key">e</span>, <span class="key">i</span>, <span class="key">l</span>, y <span class="key">/</span>, que son comandos gratuitos y, por lo tanto, no consumen energía. En general, los únicos comandos que consumen energía son aquellos que requieren que tu personaje realice alguna acción en el mundo del juego, como moverse, atacar monstruos e interactuar con objetos.</p>
+
+    <p>Si había monstruos cerca de tu personaje mientras experimentabas con los comandos <span class="key">w</span> o <span class="key">t</span>, es posible que los veas moverse o incluso atacar. Aunque es poco probable, también es posible que tu personaje se haya muerto. Esta es la única forma de perder la partida. Así que, si ya has perdido, simplemente sal del juego y reinicia esta demo.</p>
+
+    <p>Una de las cosas más importantes que tu personaje puede hacer es moverse. Usa las teclas numéricas del teclado para mover a tu personaje. Las teclas <span class="key">4</span>, <span class="key">6</span>, <span class="key">8</span>, y <span class="key">2</span> mueven a tu personaje hacia el oeste, este, norte y sur, y las teclas <span class="key">7</span>, <span class="key">9</span>, <span class="key">1</span> y <span class="key">3</span> lo mueven en diagonal. Cuando tu personaje se mueva por primera vez, observa el símbolo <span class="key">&gt;</span> que queda. Esta es la "escalera" sobre la que estaba parada antes en la demo; es la entrada a la mazmorra.</p>
+
+    <p>Intentando evitar a los monstruos, mueve a tu personaje hacia la entrada de la tienda, que se muestra <span class="key">1</span> en la pantalla. Mientras tu personaje se mueve, usa el comando <span class="key">l</span> para mirar a tu alrededor. Puedes pulsar <span class="key">ESC</span> en cualquier momento para cancelar la exploración. Si mueres, vuelve a empezar.</p>
+
+    <p>Una de las cosas más difíciles de asimilar para quienes juegan por primera vez a este tipo de juegos es que el personaje no es el mismo que el jugador. El jugador pulsa teclas y mira la pantalla del ordenador, mientras que el personaje realiza acciones complejas e interactúa con un mundo virtual. El jugador decide qué debe hacer el personaje y se lo ordena, y el personaje ejecuta las acciones. Estas acciones pueden provocar cambios en el mundo virtual. Algunos de estos cambios pueden ser evidentes para el personaje, y la información sobre ellos se pone a disposición del jugador mediante diversos métodos, como mensajes, cambios en el estado del personaje o cambios visuales en la pantalla. Otros cambios solo serán evidentes para el jugador.</p>
+
+    <p>También existen muchas acciones que el jugador puede realizar y que no se pueden describir en el mundo virtual del personaje, como redimensionar ventanas, consultar la ayuda en línea, modificar mapas de color o cambiar opciones. Algunas de estas acciones pueden incluso afectar al personaje de forma abstracta; por ejemplo, el jugador puede solicitar que, a partir de ahora, todos los monstruos sepan con exactitud dónde se encuentra el personaje en todo momento. Asimismo, hay acciones que el personaje realiza habitualmente y que el jugador quizás ni siquiera considere, como digerir alimentos o buscar trampas mientras camina por un pasillo.</p>
+
+    <p>Para colmo, a medida que te acostumbras a la diferencia entre el jugador y el personaje, se vuelve tan "obvia" que empiezas a ignorarla. Llegado ese punto, te das cuenta de que estás fusionando al jugador y al personaje en tu mente, y te encuentras diciendo cosas como "Ayer estuve en casa de un amigo, me quedé despierto hasta tarde jugando Angband, me atacaron unos perros salvajes, me mató un demonio, pero logré entrar en la lista de puntuaciones más altas", donde el pronombre cambia varias veces entre el mundo real y el virtual en la misma frase. Así que, a partir de este momento, quizás tengas que separar al jugador del personaje.</p>
+
+    <p>Bueno, sigue caminando hacia la entrada de la tienda general hasta que entres. En ese momento, la pantalla debería cambiar a la pantalla de interacción de la tienda. Verás el nombre del tendero, el nombre de la tienda y una lista de los objetos disponibles. Si hay más de doce objetos diferentes, puedes usar la barra espaciadora o las teclas de flecha para desplazarte por la lista. La tienda general es la única con un inventario fijo, aunque la cantidad de artículos puede variar. Uno de los artículos que se venden aquí son frascos de aceite. Presiona la flecha hacia abajo para resaltar la línea con los frascos de aceite y presiona la tecla <span class="key">p</span> para comprar algunos. Si te preguntan cuántos quieres, simplemente presiona <span class="key">Enter</span>. Si ya hay algo bajo el cursor, presiona <span class="key">Retorno</span> para aceptar esa opción. Presiona <span class="key">Enter</span> para aceptar el precio. Muchos comandos funcionan dentro de la tienda; por ejemplo, usa el comando <span class="key">i</span> para ver tu inventario, con el nuevo frasco de aceite. Ten en cuenta que tu inventario siempre se mantiene ordenado de forma semi lógica, por lo que los índices de algunos objetos pueden cambiar a medida que cambia tu inventario.</p>
+
+    <p>Compra algunos frascos de aceite más, si es posible: esta vez, cuando te pregunte cuántos quieres, presiona <span class="key">3</span> luego <span class="key">Enter</span> para comprar tres frascos a la vez. Los frascos de aceite son muy importantes para los personajes de bajo nivel, porque no solo se pueden usar para alimentar una linterna (cuando encuentres una), sino que también se pueden encender y lanzar a los monstruos desde la distancia. Así que suele ser una buena idea tener algunos frascos de aceite extra. Presiona <span class="key">ESC</span> para salir de la tienda. Si quieres, tómate tu tiempo para visitar el resto de las tiendas. Uno de los edificios, marcado con un <span class="key">8</span>, es tu "casa", y no es una tienda real. Puedes dejar cosas en casa y se quedarán allí hasta que regreses a recogerlas. La interfaz es exactamente la misma que la de una tienda, pero no hay pago.</p>
+
+    <p>Ahora dirígete a la escalera, representada por el símbolo <span class="key">&gt;</span>, y pulsa <span class="key">&gt;</span>, para bajar. En este punto, estás en la mazmorra. Usa el comando <span class="key">l</span> para mirar alrededor. Observa que estás en una escalera que lleva de vuelta al pueblo. Usa el comando <span class="key">&lt;</span> para subir las escaleras de vuelta al pueblo. Puede que encuentres que los habitantes del pueblo que estaban aquí antes han desaparecido y han aparecido otros nuevos. Ahora usa el comando <span class="key">&gt;</span> para bajar de nuevo las escaleras hacia la mazmorra. Ahora estás en una parte diferente de la mazmorra a la que estabas antes. La mazmorra es tan grande que, una vez que salgas de una parte, nunca la volverás a encontrar.</p>
+
+    <p>Ahora mira la pantalla. Tu personaje probablemente estará al final de un pasillo rodeado por ocho paredes y con un piso en la otra dirección. Si no estás al final de un pasillo, sigue subiendo al pueblo y bajando a la mazmorra hasta que lo estés. Podrías moverte por los pisos del pasillo, un cuadrado a la vez, pero el juego proporciona una forma, llamada "correr", de moverte muchos cuadrados hasta que haya una decisión que tomar sobre adónde ir o aparezca o suceda algo interesante. Inténtalo ahora: presiona <span class="key">.</span> y luego la tecla de dirección que te movería al piso vacío (en la mayoría de los sistemas, puedes presionar y mantener presionada la tecla Shift antes de presionar la tecla de dirección como atajo para la secuencia de dos teclas <span class="key">.</span> seguida de una dirección).</p>
+
+    <p>Cuando tu personaje se detenga, usa <span class="key">l</span> para mirar alrededor y ver qué lo detuvo. Podría ser una puerta cerrada, <span class="key">+</span>, que puedes abrir moviéndote hacia ella. Podrían ser escombros, <span class="key">:</span>, que bloquean el camino. Puedes despejarlos cavando un túnel: <span class="key">T</span> seguido de una tecla de dirección para indicar qué casilla excavar (en muchos sistemas, mantener presionada la tecla Control seguida de la tecla de dirección también funciona; esto invoca el comando "alterar" que se puede usar para excavar, abrir puertas y otras cosas).</p>
+
+    <p>Podría tratarse de un objeto, representado por un símbolo de puntuación, que no se parece a una pared, un suelo, una puerta cerrada, una puerta abierta o rota, <span class="key">'</span>. En ese caso, al moverte hacia el objeto y presionar <span class="key">g</span> y lo recogerás. Si el objeto en el suelo coincide con algo de tu inventario o es de oro o gemas, <span class="key">$</span>, tu personaje lo recogerá automáticamente.</p>
+
+    <p>Un monstruo podría haber detenido la carrera. La mayoría de los monstruos están representados por letras, pero algunos se parecen lo suficiente a objetos como para estar representados por un símbolo de puntuación. En caso de duda, usa <span class="key">l</span> para mirar algo y saber qué hay allí. Si un monstruo detuvo la carrera, puedes atacarlo moviéndote junto a él y luego moviéndote hacia él. Sigue moviéndote hacia el monstruo hasta que lo mates, el monstruo huya o tu personaje muera. Si tu personaje muere, comienza una nueva partida. Si el monstruo muere, puede que haya soltado uno o más objetos. Puedes recogerlos moviéndote hacia el objeto y luego presionando <span class="key">g</span>.</p>
+
+    <p>La carrera podría haberse detenido cuando un pasillo se bifurcaba en dos o más, o al entrar en una habitación, un espacio vacío con paredes interiores. A esta profundidad, las habitaciones casi siempre están iluminadas, y podrás ver partes más allá del radio cuadrado iluminado por tu linterna. Los pasillos son oscuros y, a menos que haya una habitación iluminada al final, solo verás lo que ilumina tu fuente de luz.</p>
+
+    <p>Ahora usa las teclas de movimiento para explorar la mazmorra. Mientras tu personaje se mueve, notarás que la pantalla muestra algunas de las cuadrículas que ha visto. Piensa en esto como una especie de "mapa" superpuesto al mundo mismo; el jugador puede ver el mapa completo, pero el personaje solo puede ver las partes del mundo que están realmente cerca. Si el personaje se acerca al borde de la parte del "mapa" de la pantalla, el mapa completo se desplazará para mostrar una nueva parte del mundo. Si la ventana del juego puede mostrar 80 por 24 caracteres, el jugador solo puede ver aproximadamente el diez por ciento de un nivel típico de mazmorra a la vez. Sin moverte, puedes usar el comando <span class="key">L</span> para mirar otras partes del mapa (también es posible con el comando de mirar <span class="key">l</span>; consulta la <a href="https://angband.readthedocs.io/en/latest/playing.html#targeting" target="_blank">sección de selección de objetivos del manual</a> para obtener más detalles). Usa la tecla <span class="key">R</span> y luego <span class="key">Enter</span> para forzar a tu personaje a "descansar" hasta que se haya recuperado de cualquier daño que sufra al atacar monstruos. Usa la tecla <span class="key">M</span> para ver todo el nivel de la mazmorra a la vez y presiona <span class="key">ESC</span> cuando termines. Si tus raciones de comida aún están en el índice <span class="key">a</span> de tu inventario, presiona <span class="key">E</span>, <span class="key">a</span> para comer algo. Si tu aceite aún está en el índice <span class="key">b</span> de tu inventario y hay un monstruo cerca, presiona <span class="key">v</span>, <span class="key">b</span>, <span class="key">'</span> para lanzar un frasco de aceite al monstruo más cercano. Para soltar un objeto de tu inventario, presiona <span class="key">d</span> más el índice de ese objeto. Puedes usar la tecla <span class="key">^X</span> para salir y guardar la partida.</p>
+
+    <p>Ahora ya sabes lo suficiente para jugar una partida rápida de Angband. Aún te queda mucho por aprender, incluyendo cómo interpretar la información sobre tu personaje, cómo crear diferentes tipos de personajes, cómo determinar qué equipo usar, cómo utilizar diversos objetos y cómo usar los más de cincuenta comandos disponibles para tu personaje. El mejor recurso para aprender todo esto es el <a href="https://angband.readthedocs.io/en/latest/index.html" target="_blank">manual que incluye esta demo</a>. La ayuda del juego, a la que accedes pulsando <span class="key">?</span>, incluye una lista de los comandos con la tecla y una breve descripción de cada uno.</p>
+
+    <h2 id="guia-jugador">Guía del jugador de Angband</h2>
+
+    <p>Esta guía asume que ya conoces la mecánica básica del juego. Si eres completamente nuevo en Angband, revisa el manual de usuario y simplemente empieza a jugar: entra en la mazmorra e intenta, bueno, lo que te parezca prudente. Probablemente morirás bastante rápido, pero lo que sigue tendrá mucho más sentido si ya tienes algo de experiencia en el juego.</p>
+
+    <p>Esta guía fue escrita para Angband 3.5.0 y actualmente está un poco desactualizada (aunque se ha eliminado lo más obsoleto). Sigue siendo una fuente útil de consejos y sugerencias; solo no la tomes como algo definitivo.</p>
+
+    <h3 id="lo-basico">Lo básico</h3>
+
+    <p>Tomado de una publicación clásica de rgra, en realidad no hay mucho que tengas que hacer obligatoriamente. Tu única misión es matar a Morgoth en el nivel 100 de la mazmorra. Para llegar allí, necesitas bajar muchas escaleras y matar a Sauron en el nivel 99. Eso es básicamente todo; todo lo demás es opcional. Por supuesto, antes de poder matar a Sauron necesitarás mucha experiencia y buen equipo, pero para cuando llegues a esa profundidad ya tendrás ambas cosas. Solo asegúrate de no morir en el camino.</p>
+
+    <p>Lo más importante que debes tener claro es que no puedes matar a todos los monstruos de todos los niveles. Piensa en el juego como incursiones a la mazmorra de las que quieres regresar con cosas geniales; piensa en los niveles más superficiales como obstáculos que debes superar en tu camino hacia las profundidades; o como prefieras verlo. Simplemente nunca, jamás, lo pienses como una matanza indiscriminada. Hasta que encuentres a Sauron, tu tarea es sobrevivir y eventualmente llegar al nivel 99.</p>
+
+    <p>El siguiente punto es que no necesitas enfrentar a ningún monstruo en particular (aparte de los dos grandes). Sí, puede que haya un tesoro bastante impresionante en ese vault o bóveda, pero si los monstruos que la custodian son demasiados o demasiado feroces, simplemente déjala pasar. Angband ofrece un suministro interminable de monstruos, tesoros y de todo. Siempre habrá otro día, siempre que vivas para verlo. A veces simplemente tienes que huir y correr por tu vida.</p>
+
+    <p>Entonces, para resumir, los puntos vitales de Angband son:</p>
+    <ul>
+        <li>Bajar muchas escaleras</li>
+        <li>Matar a Sauron (nivel de mazmorra 99)</li>
+        <li>Matar a Morgoth (nivel de mazmorra 100)</li>
+    </ul>
+
+    <h3>Inicio rápido</h3>
+
+    <p>A partir de aquí, la guía asume que estás jugando con una clase de combate (guerrero, explorador, pícaro o paladín) y una raza (Dúnedain, Alto Elfo, Enano, Semiorco, Semitroll). Primero, usa la selección de estadísticas "basada en puntos".</p>
+
+    <p>Primero, ajusta tus estadísticas para obtener el máximo de golpes. Si tienes una combinación con buena destreza, selecciona 18/10 de destreza y luego ajusta tu fuerza a 17 o 18. Ajusta tu estadística de lanzamiento de hechizos a algo bajo pero utilizable (~12), y gasta el resto en constitución. Para un personaje principiante, la constitución es lo menos importante, porque no añade HP significativos hasta bastante por encima de 18.</p>
+
+	<p>Ejemplo de un personaje en versión de Windows 11:</p>
+
+	<img src="angband-manual-esp1.png" alt="Personaje nuevo" style="width: 100%; height: auto;">
+
+    <div class="footer-meta">
+        <span>Angband - manual en español
+        <br>
+        <a href="index.html">Volver</a></span>
+    </div>
+</div>
+
+</body>
+</html>
