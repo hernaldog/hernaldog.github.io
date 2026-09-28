@@ -237,7 +237,8 @@
             <li class="toc-h2"><a href="#empezando">Empezando</a></li>
             <li class="toc-h1"><a href="#guia-jugador">Guía del jugador de Angband</a></li>
             <li class="toc-h2"><a href="#lo-basico">Lo básico</a></li>
-		<li class="toc-h2"><a href="#inicio-rapido">Inicio rápido</a></li>
+		        <li class="toc-h2"><a href="#inicio-rapido">Inicio rápido</a></li>
+					  <li class="toc-h2"><a href="#problemas-incidencias">Problemas e incidencias</a></li>						
         </ul>
     </div>
 
@@ -569,6 +570,138 @@
 <p>Puede ser difícil mantener esto con disciplina, especialmente si tu arma cuerpo a cuerpo es poderosa, pero intenta usar ataques a distancia. Prueba en niveles más tempranos, donde sobrevivir es más fácil, y juega sin ataques cuerpo a cuerpo por un tiempo para volver a acostumbrarte al arco.</p>
 
 <p>Incluso a medida que tu personaje madura, ten siempre presentes las fortalezas principales de tu raza y clase.</p>
+
+
+
+<h2 id="problemas-incidencias">Problemas e incidencias</h2>
+
+<h3>¿Cómo puedo reportar un error (bug)?</h3>
+
+<p>Publica un mensaje en el foro de Angband.</p>
+
+<p>Tu reporte debería incluir:</p>
+
+<ul>
+<li>El sistema operativo que estás usando (por ejemplo, Windows 11).</li>
+<li>La versión del juego en la que apareció el problema.</li>
+<li>Los pasos más claros y detallados que puedas proporcionar para reproducir el error.</li>
+</ul>
+
+<p>Es posible que te soliciten tu archivo de partida guardada (savefile), ya que puede ser de gran ayuda para localizar y corregir el problema.</p>
+
+<h3>Los monstruos oscuros son difíciles de ver</h3>
+
+Reduce la transparencia (alpha) de tu pantalla o utiliza la opción "Interactuar con colores" dentro del menú de opciones (=).
+
+Una vez allí, navega hasta el color 8 usando la tecla n y aumenta su intensidad mediante los componentes r (rojo), g (verde) y b (azul).
+
+¿Cómo evito el mensaje "Couldn't load the requested X11 font (10x20)"?
+
+La interfaz X11 requiere fuentes de mapa de bits heredadas (legacy bitmap fonts). Muchos sistemas modernos ya no las instalan de forma predeterminada o las colocan en ubicaciones que X11 no busca automáticamente.
+
+Las formas más habituales de resolver este problema son:
+
+Instalar los paquetes de fuentes bitmap heredadas de X11 que proporciona tu sistema operativo (el nombre del paquete varía según la distribución).
+Seleccionar explícitamente una fuente bitmap instalada definiendo la variable de entorno ANGBAND_X11_FONT.
+Utilizar otra interfaz gráfica (SDL, SDL2, Windows o macOS) que no dependa de las fuentes bitmap de X11.
+
+En Linux, la fuente requerida suele proporcionarse como:
+
+Plain Text
+10x20.pcf.gz
+Mostrar más líneas
+
+Si tu distribución permite buscar paquetes a partir de los archivos que contienen, busca uno que incluya dicho archivo.
+
+Ejemplos habituales:
+
+Debian, Ubuntu y derivados: xfonts-base
+Distribuciones basadas en Red Hat: xorg-x11-fonts-misc
+Arch Linux: xorg-fonts-misc
+
+Dependiendo de la distribución y su configuración, instalar estos paquetes podría no ser suficiente si X11 no está configurado para buscar en las rutas donde se instalan las fuentes.
+
+Si ninguna de estas soluciones funciona, consulta los foros para obtener instrucciones específicas de tu distribución o publica una consulta indicando tu sistema operativo, distribución y versión de Angband.
+
+¿Hay alguna forma de desactivar esa ventana que aparece al pulsar Enter?
+
+Sí.
+
+Ve al menú de opciones.
+Selecciona "Editar mapas de teclas" (Edit keymaps).
+Luego elige "Crear un mapa de teclas" (Create a keymap).
+Cuando se te solicite la tecla (Key), pulsa Enter.
+Cuando se te solicite la acción (Action), introduce un único espacio en blanco.
+
+Después, probablemente te interese seleccionar "Guardar mapas de teclas en un archivo" (Save keymaps to a file) y elegir:
+
+Un archivo que se cargue automáticamente al abrir un personaje, o
+Combinar el contenido guardado con alguno de los archivos de preferencias que se cargan automáticamente.
+
+De esta forma, el cambio permanecerá activo la próxima vez que inicies el juego.
+
+Lo que hace esta configuración es reemplazar la acción predeterminada de Enter por una acción de "no hacer nada" sin mostrar el mensaje de ayuda.
+
+Si deseas conservar el menú, por ejemplo asignándolo a la tecla Tab, también puedes remapear Tab para que ejecute la acción:
+
+Plain Text
+\n
+Mostrar más líneas
+Desarrollo
+¿Cuáles son los planes actuales para el juego?
+
+Cambian constantemente y pueden dar giros inesperados según la opinión y los comentarios de la comunidad.
+
+Las discusiones sobre el futuro del juego suelen producirse en la sección Vanilla de los foros.
+
+¿Cómo puedo sugerir una idea o una nueva característica?
+
+Publícala en los foros.
+
+Si la comunidad considera que es una buena idea, normalmente generará debate. Si no despierta interés, probablemente no habrá mucha discusión.
+
+Los desarrolladores siguen de cerca los foros y las ideas que se consideren adecuadas suelen registrarse para una posible implementación futura.
+
+Sin embargo, algunas sugerencias pueden no encajar con la filosofía de Angband.
+
+A lo largo de su extensa historia, Angband ha desarrollado una identidad y un estilo propios. Algunas ideas podrían dar lugar a un buen juego, o incluso a uno mejor que Angband, pero ya no serían realmente Angband.
+
+En cierta medida, las variantes del juego existen precisamente para explorar este tipo de cambios, aunque incluso ellas suelen respetar los principios fundamentales de Angband.
+
+¿Cómo consigo una copia del código fuente?
+
+Visita la página de GitHub del proyecto.
+
+Allí encontrarás tanto la versión más reciente en desarrollo como todas las versiones anteriores.
+
+¿Cómo compilo el juego?
+
+Consulta la sección de compilación del manual.
+
+¿Cómo puedo contribuir al juego?
+
+Tienes dos opciones principales:
+
+Escribir tu parche y enviarlo mediante un Pull Request en GitHub.
+Publicar tu propuesta o trabajo en los foros.
+
+Todas las contribuciones se aceptan bajo una doble licencia, compatible tanto con la licencia de Angband como con la GPLv2.
+
+También encontrarás directrices para contribuir en el archivo CONTRIBUTING.md, ubicado en el directorio principal del código fuente.
+
+Si tu parche corrige un error, es razonable esperar que se integre en la rama principal de desarrollo.
+
+Si se trata de una modificación más compleja y la funcionalidad propuesta no forma parte de los planes para la siguiente versión, el parche podría pasar por varias revisiones antes de ser incorporado.
+
+También existe la posibilidad de que la propuesta simplemente no encaje con Angband. En ese caso, no te tomes el rechazo como algo personal; quizás la mejor opción sea desarrollar una variante propia.
+
+Las contribuciones que no implican programación funcionan de manera diferente:
+
+La documentación puede escribirse en la wiki.
+Si eres diseñador gráfico (siempre hacen falta), puedes presentar tu trabajo y discutirlo en la lista de correo del proyecto.
+
+
+
 
 
 	</p>
