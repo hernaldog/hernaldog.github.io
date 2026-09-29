@@ -53,14 +53,14 @@
             border-left: 6px solid #b3a086;
             padding-left: 1rem;
         }
-        h3 {
+        h2 {
             font-size: 1.4rem;
             margin-top: 1.8rem;
             margin-bottom: 0.5rem;
             font-weight: 600;
             color: #2c3a4b;
         }
-        h4 {
+        h3 {
             font-size: 1.2rem;
             margin-top: 1.4rem;
             margin-bottom: 0.3rem;
@@ -238,20 +238,22 @@
             <li class="toc-h1"><a href="#guia-jugador">Guía del jugador de Angband</a></li>
             <li class="toc-h2"><a href="#lo-basico">Lo básico</a></li>
 		        <li class="toc-h2"><a href="#inicio-rapido">Inicio rápido</a></li>
-					  <li class="toc-h2"><a href="#problemas-incidencias">Problemas e incidencias</a></li>						
+						<li class="toc-h1"><a href="#preguntas-frecuentes">Preguntas Frecuentes</a></li>	
+					  <li class="toc-h2"><a href="#problemas-incidencias">Problemas e incidencias</a></li>
+						<li class="toc-h2"><a href="#desarrollo">Desarrollo</a></li>			
         </ul>
     </div>
 
 
-    <h2 id="bienvenido">Bienvenido a Angband</h2>
+    <h1 id="bienvenido">Bienvenido a Angband</h1>
     <p>Angband es un complejo juego de simulación de mazmorras para un solo jugador. El jugador (es decir, ¡tú mismo!) crea un personaje, eligiendo entre una variedad de razas y clases, y luego juega con ese personaje durante días, semanas o incluso meses.</p>
 
     <p>El jugador comenzará su aventura en el nivel del pueblo, donde podrá adquirir suministros, armas, armaduras y objetos mágicos comprando en las tiendas. Luego, podrá descender a las Fosas de Angband, donde explorará los numerosos niveles de la mazmorra, ganando experiencia al derrotar a feroces criaturas, recolectar objetos poderosos y valiosos tesoros, y regresar al pueblo ocasionalmente para comprar suministros. Con el tiempo, a medida que el jugador adquiera más experiencia, podrá intentar terminar o ganar el juego derrotando a Morgoth, el Señor de la Oscuridad, que reside en las profundidades.</p>
 
     <p>Angband es un juego muy complejo, y puede resultar difícil comprenderlo todo al principio, sobre todo si nunca has jugado a un juego roguelike. Un recurso clave para los jugadores de Angband es el <a href="https://angband.live/forums/" target="_blank">foro</a>, donde puedes pedir ayuda y también publicar elogios, quejas, sugerencias, informes de errores y experiencias interesantes. ¡No seas tímido!</p>
 
-    <h2 id="empezando">Empezando</h2>
-    <h3>Una demostración rápida</h3>
+    <h1 id="empezando">Empezando</h1>
+    <h2>Una demostración rápida</h2>
 
     <p>Angband es un juego muy complejo, así que quizás valga la pena leer la siguiente demostración rápida. Las siguientes instrucciones son solo para fines demostrativos, por lo que son intencionadamente aburridas.</p>
 
@@ -309,13 +311,13 @@
 
     <p>Ahora ya sabes lo suficiente para jugar una partida rápida de Angband. Aún te queda mucho por aprender, incluyendo cómo interpretar la información sobre tu personaje, cómo crear diferentes tipos de personajes, cómo determinar qué equipo usar, cómo utilizar diversos objetos y cómo usar los más de cincuenta comandos disponibles para tu personaje. El mejor recurso para aprender todo esto es el <a href="https://angband.readthedocs.io/en/latest/index.html" target="_blank">manual que incluye esta demo</a>. La ayuda del juego, a la que accedes pulsando <span class="key">?</span>, incluye una lista de los comandos con la tecla y una breve descripción de cada uno.</p>
 
-    <h2 id="guia-jugador">Guía del jugador de Angband</h2>
+    <h1 id="guia-jugador">Guía del jugador de Angband</h1>
 
     <p>Esta guía asume que ya conoces la mecánica básica del juego. Si eres completamente nuevo en Angband, revisa el manual de usuario y simplemente empieza a jugar: entra en la mazmorra e intenta, bueno, lo que te parezca prudente. Probablemente morirás bastante rápido, pero lo que sigue tendrá mucho más sentido si ya tienes algo de experiencia en el juego.</p>
 
     <p>Esta guía fue escrita para Angband 3.5.0 y actualmente está un poco desactualizada (aunque se ha eliminado lo más obsoleto). Sigue siendo una fuente útil de consejos y sugerencias; solo no la tomes como algo definitivo.</p>
 
-    <h3 id="lo-basico">Lo básico</h3>
+    <h2 id="lo-basico">Lo básico</h2>
 
     <p>Tomado de una publicación clásica de rgra, en realidad no hay mucho que tengas que hacer obligatoriamente. Tu única misión es matar a Morgoth en el nivel 100 de la mazmorra. Para llegar allí, necesitas bajar muchas escaleras y matar a Sauron en el nivel 99. Eso es básicamente todo; todo lo demás es opcional. Por supuesto, antes de poder matar a Sauron necesitarás mucha experiencia y buen equipo, pero para cuando llegues a esa profundidad ya tendrás ambas cosas. Solo asegúrate de no morir en el camino.</p>
 
@@ -330,7 +332,7 @@
         <li>Matar a Morgoth (nivel de mazmorra 100)</li>
     </ul>
 
-    <h3 id="inicio-rapido">Inicio rápido</h3>
+    <h2 id="inicio-rapido">Inicio rápido</h2>
 
     <p>A partir de aquí, la guía asume que estás jugando con una clase de combate (guerrero, explorador, pícaro o paladín) y alguna de estas razas: Dúnedain, Alto Elfo, Enano, Semiorco o Semitroll. Primero, usa la selección de estadísticas "basada en puntos".</p>
 
@@ -344,17 +346,17 @@
 
 <img src="angband-manual-esp2.png" alt="Personaje nuevo" style="width: 100%; height: auto;">
 
-<h3>Una oportunidad de pelea</h3>
+<h2>Una oportunidad de pelea</h2>
 
 <p>Para un personaje de combate cuerpo a cuerpo, la medida de poder más importante es cuánto daño puede infligir en un solo turno. Consideremos al personaje de nivel 1 mencionado antes, con 3 golpes usando un Estoque (+7,+9), en un combate contra un enemigo llamado Bullroarer, sin escapes, sin armas a distancia y sin armadura. A primera vista, no tienes ninguna posibilidad. Sin embargo, si logras golpear primero, en realidad tienes un 71% de probabilidad de matar al Bullroarer en un solo turno, y un 95% de probabilidad de asustarlo.</p>
 
 <p>Además, con todos los potenciadores activos (!Héroe, ?Bendición, ?Furia Berserker), el personaje tiene un 81% de probabilidad de matarlo en un solo turno. Además de mejorar la probabilidad de acierto del 91% al 95%, esto representa una reducción del 50% en la probabilidad de fallar en una situación peligrosa. Finalmente, suponiendo que "Anar" gane esta batalla, obtiene 450 puntos de experiencia y sube de inmediato al nivel de personaje 8.</p>
 
-<h3>Daño a distancia</h3>
+<h2>Daño a distancia</h2>
 
 <p>Con la preparación adecuada, incluso un personaje débil tiene una probabilidad casi garantizada de matar a Bullroarer, si lo enfrenta a distancia (en una sala iluminada). Un arco largo sin encantar hace 7.5 de daño por disparo con flechas comunes (no encantadas). Sin embargo, los frascos de aceite hacen 7 puntos de daño nominal al lanzarse, y triplican el daño (21 puntos) contra monstruos vulnerables al fuego. Bullroarer tiene 60 puntos de vida, así que incluso una pequeña reserva de frascos de aceite bastará para acabar con él. </p>
 
-<h3>Resumen</h3>
+<h2>Resumen</h2>
 
 <ul>
 <li>El poder de un personaje está más relacionado con la cantidad de daño que puede infligir que con sus puntos de vida o su nivel de personaje.</li>
@@ -364,11 +366,11 @@
 <li>Equipo inicial</li>
 </ul>
 
-<h3>Poder de combate</h3>
+<h2>Poder de combate</h2>
 
 <p>Compra un arma ligera que te dé el máximo número de golpes posible, con los dados más altos disponibles. Generalmente es un Estoque, una Daga de mano izquierda (Main Gauche) o una Daga. Si no están disponibles, probablemente sea mejor abandonar la partida y volver a empezar.</p>
 
-<h3>Planea llegar más abajo</h3>
+<h2>Planea llegar más abajo</h2>
 
 <p>Asegúrate siempre de llevar un Scroll of Recall (Pergamino de Retorno), incluso en tu primer viaje a la mazmorra. Los monstruos y objetos en el nivel de mazmorra 5 (250') y más profundo son mucho más valiosos (~100 veces más) que los del nivel 1. (El ejemplo anterior puede parecer exagerado, pero es representativo.)</p>
 
@@ -405,13 +407,13 @@
 
 <p>Tu equipo inicial incluirá más que suficiente comida e iluminación para el primer viaje.</p>
 
-<h3>El primer viaje</h3>
+<h2>El primer viaje</h2>
 
 <p>Es bastante posible llegar a 500' (nivel de mazmorra 10) o más en el primer viaje a la mazmorra. Planea regresar cuando se te acaben los escapes (Phase door), la protección contra efectos secundarios (pociones curativas) o el daño (flechas si eres explorador, frascos de aceite si eres débil de otra forma).</p>
 
 <p>Como no tienes mucho, no lo gastes en monstruos poco valiosos.</p>
 
-<h3>Qué matar</h3>
+<h2>Qué matar</h2>
 
 <ul>
 <li>Cualquier grupo de monstruos que puedas derrotar (matar o asustar) en un solo turno y que dé buena experiencia (una manada de lobos) o buen botín 
@@ -420,7 +422,7 @@
 <li>Matanzas fáciles que probablemente suelten algo valioso</li>
 </ul>
 
-<h3>Qué ignorar</h3>
+<h2>Qué ignorar</h2>
 
 <ul>
 <li>Monstruos que dañan o destruyen tu equipo (gelatinas, sabuesos de agua, etc.)</li>
@@ -431,47 +433,47 @@
 <li>Cosas que hacen perder el tiempo (criaturas que se reproducen y que huyen, monstruos sin experiencia ni botín). Cierra la puerta y sigue adelante.</li>
 </ul>
 
-<h3>Qué evitar</h3>
+<h2>Qué evitar</h2>
 
 <ul>
 <li>Cualquier cosa que pueda matarte en un solo turno.</li>
 </ul>
 
-<h3>Sobre la mala suerte</h3>
+<h2>Sobre la mala suerte</h2>
 
 <p>Esta es la regla número uno de Angband: no tomes riesgos innecesarios. Si acumulas suficientes probabilidades bajas de morir, nunca sobrevivirás para enfrentar a Sauron. Ese tipo de muertes suelen llamarse "estúpidas", pero eso no siempre es exacto. A veces es simplemente mala suerte. Pero si te expones a suficientes oportunidades, tarde o temprano te tocará. Ese es el truco de las inmersiones extremadamente rápidas: cuantos menos movimientos hagas, menor será la probabilidad de que alguno sea fatal, aunque en promedio tus movimientos individuales sean más arriesgados que en un juego lento. Pero la estrategia aplica en general: a menos que seas extremadamente cuidadoso, quedarte demasiado tiempo en cualquier profundidad garantiza que tarde o temprano pase algo malo.</p>
 
-<h3>Consejos "de manual"</h3>
+<h2>Consejos "de manual"</h2>
 
 <p>Lo anterior es un buen consejo; sin embargo, no ofrece mucho más que generalizaciones —válidas, eso sí— para el jugador "intermedio" (¿?). Lo siguiente pretende señalar lo que muchos consideran obvio, de ahí las muertes tipo "¡¿hiciste QUÉ?!" que te hacen llevarte la mano a la cara. Esto debería limpiarse y reorganizarse, pero por ahora se deja aquí.</p>
 
 <p>ADVERTENCIA: todavía no he logrado ganar o terminar Angband. Esto es una recopilación de algunos de los mejores consejos que he aprendido mientras intentaba explorar las profundidades (hasta el nivel ~35). ¡Cualquier consejo adicional será bienvenido!</p>
 
-<h4>Empieza simple</h4>
+<h3>Empieza simple</h3>
 
 <p>Comienza tu carrera en Angband como guerrero. Los guerreros son relativamente sencillos para empezar, y es menos probable que una manada de chacales te devore.</p>
 
-<h4>¡Concéntrate!</h4>
+<h3>¡Concéntrate!</h3>
 
 <p>Angband es un juego muy duro, en el sentido de que el personaje con el que llevas jugando meses puede morir por una sola acción descuidada. Jugar cansado o borracho probablemente sea una buena manera de quedarte solo con una triste historia que contar en los foros. Si tienes la capacidad de detectar monstruos o trampas, úsala. Esto es especialmente importante cuando empiezas a encontrarte con monstruos que, sin el equipo adecuado, pueden matar a tu personaje en un solo movimiento.</p>
 
-<h4>Usa esas cosas</h4>
+<h3>Usa esas cosas</h3>
 
 <p>Angband tiene pociones, libros de hechizos, varitas, bastones, varas, objetos activables, armas cuerpo a cuerpo, armas a distancia, y más. ¡Están hechos para usarse, por el amor de todo! Puede tomar un tiempo acostumbrarse a usar todos los distintos tipos de objetos, pero funcionan mejor cuando se combinan entre sí. Para quienes pueden usar dispositivos mágicos, las varas, varitas y bastones son muy útiles cuando tu maná escasea, y dan acceso a hechizos que normalmente no estarían disponibles para tu clase. También son muy útiles para lidiar con ciertos monstruos.</p>
 
-<h4>Los exploradores tienen arco</h4>
+<h3>Los exploradores tienen arco</h3>
 
 <p>En realidad es un caso asociado al punto anterior, pero pasa muy seguido... No intentes jugar como un Explorador como si fueras un Guerrero: ¡confía en el arco! De forma similar, para los Magos, no te creas Gandalf. Puede que él sea capaz de desenvainar una espada y lanzarse de cabeza contra un grupo de orcos, pero los magos en Angband son considerablemente más frágiles. Los sacerdotes están mejor equipados para el combate cuerpo a cuerpo, ya que sus habilidades de curación compensan su naturaleza algo frágil.</p>
 
-<h4>¡Haz acopio!</h4>
+<h3>¡Haz acopio!</h3>
 
 <p>Puede que no estés inclinado a llevar varias unidades de un objeto, o lo hagas en cantidad limitada, quizás por el peso. No tengas miedo de llevar MUCHAS unidades de algo, especialmente lo básico: comida, luz, proyectiles, pociones curativas, pergaminos de "huida", etc. ¡No temas llevar al MÁXIMO los objetos importantes! Algunos monstruos roban o destruyen tus objetos, así que vale la pena llevar cantidades adicionales de objetos clave, como Pergaminos de Recuerdo o libros de hechizos/oraciones importantes. Esto se vuelve muy importante al llegar a niveles donde los monstruos tienen ataques de fuego y ácido. Los magos y sacerdotes suelen empezar con poca fuerza, por lo que están muy limitados en cuánto pueden cargar; considera llevar copias adicionales de los libros que no puedes permitirte perder durante un combate.</p>
 
-<h4>Un objeto que no usas es inútil</h4>
+<h3>Un objeto que no usas es inútil</h3>
 
 <p>Error común: ¡encuentras un increíble Bastón Poderoso! (con 3 cargas), o una única Poción de convertirte en Chuck Norris, y lo cargas por todos lados sin usarlo nunca. Podría ser como un seguro de vida, pero quizás deberías reconsiderar tu estrategia: tal vez te has vuelto demasiado precavido últimamente (después de todo, Angband recompensa el riesgo calculado).</p>
 
-<h4>Identificar tus objetos</h4>
+<h3>Identificar tus objetos</h3>
 
 <p>Muchos de los objetos que encuentres, especialmente al principio, estarán sin identificar o parcialmente identificados. Las armas y armaduras se identifican usándolas en combate, y se pueden quitar si resultan ser de mala calidad. Algunos personajes aprenden hechizos para identificar las runas en los objetos equipables que definen sus propiedades.</p>
 
@@ -481,51 +483,51 @@
 
 <p>Con las armas y armaduras, tu personaje aprenderá con el tiempo las runas grabadas en ellas.</p>
 
-<h4>La mazmorra está oscura</h4>
+<h3>La mazmorra está oscura</h3>
 
 <p>Notarás fácilmente que los pasillos no están iluminados; sin embargo, lo que quizás no sea tan obvio es que la mazmorra se vuelve más oscura con la profundidad, hasta quedar completamente negra. SIEMPRE lleva una fuente de luz. ¡NO la sueltes por más botín!</p>
 
-<h4>Puedes HUIR</h4>
+<h3>Puedes HUIR</h3>
 
 <p>NO hay ninguna regla que diga que debes limpiar por completo una mazmorra. ¿Ves algo que no puedes manejar? No temas irte, AHORA MISMO. Claro que podrías intentar evitarlo, pero también podría ser un "hummerhorn". ¿Vas a la mitad del nivel? Todavía puedes IRTE AHORA. ¿Casi terminas? Todavía puedes irte AHORA. Piénsalo como un ataque táctico, no como una misión de exterminio total.</p>
 
-<h4>¡Escapa YA!</h4>
+<h3>¡Escapa YA!</h3>
 
 <p>Deberías prestar más atención y no meterte en situaciones donde el siguiente turno signifique la muerte, pero esto no siempre se puede evitar y nadie es tan meticulosamente paciente. SIEMPRE lleva objetos de escape: Puerta Dimensional, Teletransporte, Recuerdo, Teletransporte de Nivel, etc. Cuando puedas, acumula los que funcionan de inmediato. Si un único empieza a perseguirte, no querrás estar esperando a que el Recuerdo haga efecto.</p>
 
 <p>Considera seriamente huir si te enfrentas a monstruos que se reproducen de forma explosiva. Algunas clases, como los magos, manejan mejor esto con hechizos que afectan a varios monstruos a la vez, pero incluso ellos deberían considerar irse si los monstruos se reproducen más rápido de lo que puedes matarlos.</p>
 
-<h4>El nivel 1 sigue ahí</h4>
+<h3>El nivel 1 sigue ahí</h3>
 
 <p>No olvides que siempre puedes volver a jugar los niveles iniciales por cualquier motivo. ¿Te recordaron desde una profundidad demasiado grande? Baja desde el nivel 1 y reinicia la profundidad. ¿Quieres llenar tus ranuras de armadura? ¿Necesitas más oro? Incluso en racha bajando, detente y reconsidera si quieres volver a un nivel anterior; nunca sabes qué puede acechar a la vuelta de la esquina.</p>
 
-<h4>Ofertas del mercado negro</h4>
+<h3>Ofertas del mercado negro</h3>
 
 <p>No temas comprar en el "mercado negro". Los precios son más caros que en otras tiendas, pero suele ofrecer buena selección, y puede valer la pena el oro comparado con no tener el objeto en la mazmorra. Siempre puedes conseguir más oro, pero el generador de números aleatorios (RNG) es aleatorio. Es solo otra tienda más. El mercado negro suele ser buena fuente de pociones para aumentar estadísticas, así que revísalo cada vez que visites el pueblo y trata de tener oro suficiente para las estadísticas más importantes de tu personaje.</p>
 
-<h4>Prueba una estrategia diferente</h4>
+<h3>Prueba una estrategia diferente</h3>
 
 <p>Lo que estás haciendo más o menos funciona, pero tus personajes siguen muriendo. ¿Juegas conservador? Prueba jugar como si la configuración de escaleras "iron-man" estuviera activada. Probablemente quieras armas a distancia para esto, pero podrías sorprenderte de lo rápido que subes de nivel si te SUMERGES. Los niveles bajos son más difíciles, pero cuanto más profundo vas, más experiencia obtienes por muerte. Sigue peleando con cautela, pero sumérgete agresivamente. No temas descartar personajes: sumérgete agresivamente hasta agarrarle el truco a tu personaje y subir de nivel.</p>
 
-<h4>Sobre la profundidad y el valor de los objetos</h4>
+<h3>Sobre la profundidad y el valor de los objetos</h3>
 
 <p>Cada vez que matas a un monstruo que puede soltar un objeto, entra en juego mucha aleatoriedad. Basta con decir que la profundidad es, por lejos, el factor más importante. Puedes encontrar objetos valiosos incluso en el primer nivel, pero las probabilidades son bajas.</p>
 
 <p>En resumen: si quieres encontrar mejores cosas, necesitas ir más profundo.</p>
 
-<h4>El monstruo casi no importa</h4>
+<h3>El monstruo casi no importa</h3>
 
 <p>Si un monstruo suelta un objeto, puede ser cualquier cosa. En serio. Puedes encontrar libros de hechizos raros en trolls analfabetos, y las gelatinas pueden soltar armas artefacto. Algunos monstruos raros, como dragones poderosos, llevarán objetos buenos o excepcionales, pero el nivel de mazmorra sigue siendo el factor más importante. Lo "excepcional" en el nivel 8 probablemente sea poco interesante en el nivel 30.</p>
 
-<h4>Sobre los artefactos</h4>
+<h3>Sobre los artefactos</h3>
 
 <p>Para cada objeto equipable existe una pequeña probabilidad de que sea un artefacto. Puede parecer poco, pero considerando la cantidad de monstruos que vas a matar, pronto se acumula. Si limpias una sala grande llena de orcos, hay aproximadamente una probabilidad de uno en diez de descubrir al menos un artefacto entre la masacre. Los artefactos suelen tener estadísticas impresionantes y una habilidad activable.</p>
 
-<h3>Sobreviviendo hasta nivel de personaje 31 / nivel de mazmorra 36</h3>
+<h2>Sobreviviendo hasta nivel de personaje 31 / nivel de mazmorra 36</h2>
 
 <p>Consejos adicionales aprendidos de varios intentos fallidos. Todavía no he vencido a Angband, pero últimamente estoy progresando bastante, sobre todo con mi personaje actual.</p>
 
-<h4>¡HUYE!</h4>
+<h3>¡HUYE!</h3>
 
 <p>El primer consejo es un principio básico repetido en toda la guía; sin embargo, es demasiado fácil quedar absorto en tus logros (un artefacto increíble, maximizar estadísticas, un objeto mejor, un segundo golpe, un bono de velocidad, etc.) y perderlo todo por algo perfectamente evitable si hubieras estado prestando atención.</p>
 
@@ -535,7 +537,7 @@
 
 <p>¿Ves algunos únicos u otros monstruos que podrían darte problemas? ¿Una bóveda con buen tesoro pero algunos monstruos molestos? Si no estás muy seguro (idealmente al 100%) de que puedes sobrevivir fácilmente al nivel, puedes irte en ese mismo momento. Entra al nivel, haz de inmediato tu rutina de detección, evalúa la amenaza y usa las escaleras si quieres. Puedes subir tan fácilmente como bajaste. Además, los artefactos pueden regenerarse y, a medida que te sumerges, encontrarás objetos aún mejores. Así que, si te saltas niveles por jugar conservador, igual encontrarás grandes objetos y, mejor aún, tendrás más probabilidades de sobrevivir.</p>
 
-<h4>Conciencia de la información</h4>
+<h3>Conciencia de la información</h3>
 
 <p>Angband ofrece MUCHA información en MUCHAS pantallas diferentes. Si aún no lo has hecho, intenta activar varias consolas —TODAS— y prueba distintas combinaciones. Ver mucha información de un vistazo es una ventaja considerable frente a revisar manualmente cada pantalla.</p>
 
@@ -543,13 +545,13 @@
 
 <p>¡Esto por sí solo ha contribuido enormemente a mi capacidad de sobrevivir!</p>
 
-<h4>Empieza desde el principio</h4>
+<h3>Empieza desde el principio</h3>
 
 <p>Madurar a tu personaje por los niveles 20 puede ser complicado hasta que sobrevivas incluso a profundidades más bajas. Un consejo: usa el Recuerdo exclusivamente para regresar de la mazmorra, y las escaleras para volver a bajar al nivel donde te quedaste.</p>
 
 <p>Sí, es más trabajo, y a medida que tu nivel sube, los niveles iniciales se vuelven excepcionalmente fáciles; sin embargo, garantiza que siempre entrarás a un nivel sobre una escalera, facilitando la huida.</p>
 
-<h4>Recolectar objetos</h4>
+<h3>Recolectar objetos</h3>
 
 <p>Es fácil acumular cosas, pero te quedarás sin espacio MUY rápido. Además, lo útil hoy puede no serlo mañana. Es fácil caer en la tentación de agarrar todo y volver al pueblo cuando el inventario esté lleno; sin embargo, al llegar a ese punto, intenta seguir bajando, incluso con inventario lleno.</p>
 
@@ -557,19 +559,23 @@
 
 <p>Esto es particularmente importante al sumergirte. Si dejas que un inventario lleno te limite, no llegarás ni de cerca tan profundo como si estuvieras dispuesto a descartar objetos por el camino.</p>
 
-<h4>Tómate un descanso</h4>
+<h3>Tómate un descanso</h3>
 
 <p>Otro consejo básico repetido en la guía: aprende a dejar de jugar. Siempre puedes guardar la partida y continuar más tarde, en tu mejor momento, en lugar de seguir jugando mientras te gana el sueño.</p>
 
 <p>Esto puede ser difícil al principio, pero puede ayudarte a evitar arruinar buenos personajes por errores evitables...</p>
 
-<h4>¡No olvides tus ataques a distancia!</h4>
+<h3>¡No olvides tus ataques a distancia!</h3>
 
 <p>A medida que tu personaje se desarrolla, te vuelves más poderoso cuerpo a cuerpo; sin embargo, esto no significa que debas dejar los ataques a distancia. Es demasiado fácil jugar a un explorador como guerrero-mago si consigues un buen arma cuerpo a cuerpo, ¡pero no olvides tu habilidad a distancia! Puedes ser "Excelente" en combate cuerpo a cuerpo, pero los exploradores son aún mejores disparando, quizás incluso "Legendarios" o más.</p>
 
 <p>Puede ser difícil mantener esto con disciplina, especialmente si tu arma cuerpo a cuerpo es poderosa, pero intenta usar ataques a distancia. Prueba en niveles más tempranos, donde sobrevivir es más fácil, y juega sin ataques cuerpo a cuerpo por un tiempo para volver a acostumbrarte al arco.</p>
 
 <p>Incluso a medida que tu personaje madura, ten siempre presentes las fortalezas principales de tu raza y clase.</p>
+
+
+
+<h1 id="preguntas-frecuentes">Preguntas frecuentes</h1>
 
 
 <h2 id="problemas-incidencias">Problemas e incidencias</h2>
@@ -626,19 +632,19 @@ Combinar el contenido guardado con alguno de los archivos de preferencias que se
 
 <p>Lo que hace esta configuración es reemplazar la acción predeterminada de Enter por una acción de "no hacer nada" sin mostrar el mensaje de ayuda. Si deseas conservar el menú, por ejemplo asignándolo a la tecla Tab, también puedes remapear Tab para que ejecute la acción <span class="key">\n</span>
 
-<h3>Desarrollo</h3>
+<h2 id="desarrollo">Desarrollo</h2>
 
-<h4>Cuáles son los planes actuales para el juego?</h4>
+<h3>Cuáles son los planes actuales para el juego?</h3>
 
 <p>Cambian constantemente y pueden dar giros inesperados según la opinión y los comentarios de la comunidad. Las discusiones sobre el futuro del juego suelen producirse en la <a target="_blank" href="https://angband.live/forums/forum/angband/vanilla">sección Vanilla</a> de los foros.</p>
 
-<h4>¿Cómo puedo sugerir una idea o una nueva característica?</h4>
+<h3>¿Cómo puedo sugerir una idea o una nueva característica?</h3>
 
 <p>Publícala en los foros. Si la comunidad considera que es una buena idea, normalmente generará debate. Si no despierta interés, probablemente no habrá mucha discusión. Los desarrolladores siguen de cerca los foros y las ideas que se consideren adecuadas suelen registrarse para una posible implementación futura.</p>
 
 <p>Sin embargo, algunas sugerencias pueden no encajar con la filosofía de Angband. A lo largo de su extensa historia, Angband ha desarrollado una identidad y un estilo propios. Algunas ideas podrían dar lugar a un buen juego, o incluso a uno mejor que Angband, pero ya no serían realmente Angband. En cierta medida, las variantes del juego existen precisamente para explorar este tipo de cambios, aunque incluso ellas suelen respetar los principios fundamentales de Angband.
 
-<h4>¿Cómo consigo una copia del código fuente?</h4>
+<h3>¿Cómo consigo una copia del código fuente?</h3>
 
 <p>Visita la página de <a target="_blank" href="https://github.com/angband/angband/">GitHub</a> del proyecto.</p>
 
@@ -646,12 +652,12 @@ Combinar el contenido guardado con alguno de los archivos de preferencias que se
 
 Allí encontrarás tanto la versión más reciente en desarrollo como todas las versiones anteriores.
 
-<h4>¿Cómo compilo el juego?</h4>
+<h3>¿Cómo compilo el juego?</h3>
 
 <p>Consulta la <a taget="blank" href="https://angband.readthedocs.io/en/latest/hacking/compiling.html">sección de compilación del manual.</a></p>
 <p>Para la versión en Español sigue los pasos que están en <a href="./Proyecto-Traduc-juego-Angband-Esp.html">mi sitio del proyecto de traducción al Español</a></p>
 
-<h4>¿Cómo puedo contribuir al juego?</h4>
+<h3>¿Cómo puedo contribuir al juego?</h3>
 
 <p>Tienes dos opciones principales:</p>
 
